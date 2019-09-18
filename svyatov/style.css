@@ -1,0 +1,26 @@
+.pad{
+    padding-left: 50px;
+    padding-top: 8px;
+    padding-bottom: 25px;
+}
+
+
+
+.item-img {
+     
+    height: 500px; 
+    background-repeat: no-rpeat;
+    background-position: center;
+    -webkit-background-size: cover; 
+    background-size: cover; 
+    margin: 0 auto;
+  }
+  .slaid{
+    margin-top: 25px;  
+}
+
+.text{
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+}
