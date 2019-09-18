@@ -6,20 +6,69 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>myPage</title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/f5c5751c96.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/stylepage.css">
+    <link rel="stylesheet" href="css/slider.css">
 </head>
 <body>
-    <header>
+    <div id="container">
+    <div class="leftbar">
+        <div class="section1">
+            <div class="txt"><h3>А вот собсна и Я</h3></div>
+                <div class="slides"><!--Слайдер-->
+                    <ul>
+                        <li><img class="img_bg" src="img/1.jpg" alt="" /></li>
+                        <li><img src="img/3.jpg" alt="" /></li>
+                        <li><img src="img/2.jpg"alt="" /></li>
+                        <li><img class="imgbg" src="img/2.png" alt="" /></li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+    <div class="rightbar">
+        <div class="section2">
+                <div class="section3">
+                        <div class="menu-block">
+                          <nav class="menu-nav">
+                            <a href="https://vk.com/almihaylovich"><i class="fab fa-vk"></i></a>
+                            <a href="https://www.instagram.com/al_mihaylovich/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://mail.ru/"><i class="fas fa-at"></i></a>
+                            <a href="https://github.com/almihayovich"><i class="fab fa-github"></i></a>
+                          </nav>
+                          
+                          <a href="#" class="menu-btn">
+                            <span></span>
+                          </a>
+
+                        </div>
+                </div>
+                <img class="card1" src="img/4.png" alt="">
+        </div>
+    </div>
+    <div class="header">
         <div class="section">
             <img class="card" src="img/3.png" alt="">
         </div>
         <div class="words">
             <h3 class="word">Alexey Sorokin</h3>
         </div>
-    </header>
+    </div>
+</div>
+    <script>
+        $('.menu-btn').on('click', function(e){
+            e.preventDefault();
+            $(this).toggleClass('menu-btn_active');
+            $('.menu-nav').toggleClass('menu-nav_active');
+        });
+    </script>
     <script>
             $('.card').on('click', function(){
                 $('.section').toggleClass('container-origin');
+            });
+    </script>
+    <script>
+            $('.card1').on('click', function(){
+                $('.card1').toggleClass('container-origins');
             });
     </script>
 </body>
