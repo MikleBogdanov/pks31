@@ -1,0 +1,93 @@
+body {
+   padding: 0px ;
+   margin: 0px ;
+   color: black;
+   font-family: Arial;
+}
+
+#first {
+   height: 500px;
+   background: url(../img/2.jpg) no-repeat center top / cover ;
+   color: #fff;
+}
+
+.container {
+    width: 1170px;
+    margin: 0px auto;
+}
+
+header {
+    padding-top: 50px;
+}
+
+.mail {
+    float: left;
+    font-size: 16px;
+    padding-left: 0px;
+
+}
+
+.logo{
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0px 0px 0px 320px;
+}
+
+.phone {
+    float: right;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.logo span{
+    color:white;
+}
+
+.logo ins{
+    color:red;
+}
+
+h1{
+    font-size: 41px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: bold;
+    margin-top: 260px;
+}
+
+h1 span {
+    font-size: 31px;
+    font-weight: normal;
+    display: block;
+}
+
+.button{
+    background: #fff;
+    color:black;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.wrap{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top:0;
+    background-color: turquoise;
+}
+
+.card{
+  width: 300px;
+  height: 300px;
+  border:1px solid;
+}
+
+.front ,.back {
+  border:1px solid green;
+  
+}
