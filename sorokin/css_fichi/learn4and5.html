@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>learn4 and 5</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/learn4.css">
+</head>
+<body>
+        <div class="section">
+                <div class="menu-block">
+                  <nav class="menu-nav">
+                    <a href="#">Main</a>
+                    <a href="#">Porfolio</a>
+                    <a href="#">About</a>
+                    <a href="#">Contacts</a>
+                  </nav>
+                  
+                  <a href="#" class="menu-btn">
+                    <span></span>
+                  </a>
+                  
+                </div>
+              </div>
+    <script>
+        $('.menu-btn').on('click', function(e){
+            e.preventDefault();
+            $(this).toggleClass('menu-btn_active');
+            $('.menu-nav').toggleClass('menu-nav_active');
+        });
+    </script>
+</body>
+</html>
