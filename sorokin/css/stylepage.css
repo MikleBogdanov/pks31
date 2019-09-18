@@ -1,3 +1,28 @@
 body{
     margin: 0;
 }
+.header{
+    height: 400px;
+    width: 100%;
+    background-color: #fff0ffaa;
+}
+.section{
+    float: left;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: #ffaaaa;
+}
+img{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    max-width: 100%;
+}
+.word{
+    padding-right: 10px;
+    width: 400px;
+    height: 400px;
+    background-color: #aaaaff;
+    float: left;
+}
