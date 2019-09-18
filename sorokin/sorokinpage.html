@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>myPage</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/stylepage.css">
 </head>
 <body>
-    <div class="header">
+    <header>
         <div class="section">
-            <img src="img/3.png" alt="">
+            <img class="card" src="img/3.png" alt="">
         </div>
-        <div class="word">
-            <h3>Alexey</h3>
+        <div class="words">
+            <h3 class="word">Alexey Sorokin</h3>
         </div>
-    </div>
+    </header>
+    <script>
+            $('.card').on('click', function(){
+                $('.section').toggleClass('container-origin');
+            });
+    </script>
 </body>
 </html>
