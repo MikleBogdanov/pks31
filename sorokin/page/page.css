@@ -1,0 +1,54 @@
+body{
+    background-color: #cccccc;
+    margin: 0;
+    padding: 0;
+}
+.menu_all{
+    margin: 0 auto;
+    width: 95%;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,1);
+}
+.header{
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    background-color: #ccffcc;
+}
+.section_1{
+    border: 2px dashed #000;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    position: relative;
+    width: 30%;
+    height: 45vh;
+    float: left;
+    background-color: #ffcccc;
+}
+.card_1{
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: 5px;
+    max-width: 70%;
+    background-color:#ccc;
+    border-radius: 200px;
+}
+.section_2{
+    width: 65%;
+    height: 45vh;
+    float: right;
+    background-color: #ccffff;
+}
+h2{
+    text-align: center;
+    font-size: 5vh;
+    margin-top: 15px;
+    margin-right: 40px;
+    padding: 0;
+}
+.word_2{
+    float: right;
+}
