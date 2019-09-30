@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alexey</title>
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="learn7.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/f5c5751c96.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="menu_all">
+        <div class="header">
+            <div class="section_1">
+                <img class="card_1" src="1.png" alt="">
+            </div>
+            <!-- <div class="section3">
+                <div class="menu-block">
+                    <a href="#" class="menu-btn">
+                        <span></span>
+                    </a>
+                    <nav class="menu">
+                        <a href="#"><i class="fas fa-calculator"></i></a>
+                        <a href="#"><i class="fas fa-camera-retro"></i></a>
+                        <a href="#"><i class="fas fa-calendar-check"></i></a>
+                    </nav>
+                </div>
+            </div> -->
+            <div class="section_2">
+                <h2 class="word_1">СОРОКИН АЛЕКСЕЙ МИХАЙЛОВИЧ</h2>
+                <h2 class="word_2">СТУДЕНТ 3-го КУРСА</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+            $('.menu-btn').on('click', function(e){
+                e.preventDefault();
+                $(this).toggleClass('menu-btn_active');
+                $('.menu').toggleClass('menu_active');
+            });
+        </script>
+</body>
+</html>

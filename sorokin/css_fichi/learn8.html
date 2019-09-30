@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>learn8</title>
+    <link rel="stylesheet" href="css/learn8.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+        <div class="wrapper">
+                <div class="menu">
+                  <a href="#" class="menu-btn"></a>
+                  <nav class="menu-list">
+                    <a href="#">Главная</a>
+                    <a href="#">Новости</a>
+                    <a href="#">Контакты</a>
+                    <a href="#">Портфолио</a>
+                  </nav>
+                </div>
+                <div class="content">
+                  <section class="main">
+                    <h2>Главная</h2>
+                  </section>
+                  <section class="news">
+                    <h2>Новости</h2>
+                  </section>
+                  <section class="contacts">
+                    <h2>Контакты</h2>
+                  </section>
+                  <section class="portfolio">
+                    <h2>Портфолио</h2>
+                  </section>
+                </div>
+              </div>
+    <script>
+        $('.menu-btn').on('click',function (e) {
+            e.preventDefault();
+            $('.menu').toggleClass('menu_active');
+            $('.content').toggleClass('content_active');
+        })
+    </script>
+</body>
+</html>
