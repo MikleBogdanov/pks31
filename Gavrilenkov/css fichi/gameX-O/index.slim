@@ -1,0 +1,31 @@
+form.board
+  div.boxes
+    - for i in (1..9)
+      input.x type='checkbox' id='x-#{i}'
+    - for i in (1..9)
+      input.o type='checkbox' id='o-#{i}'
+    div.controls
+      div.control.-x
+        div.control-labels
+          - for i in (1..9)
+            label.x for='x-#{i}'
+      div.control.-o
+        div.control-labels
+          - for i in (1..9)
+            label.o for='o-#{i}'
+    div.done
+      div.lead Winner is
+      div.winner
+      input type='submit' value='Again'
+    div.tie 
+      span It's a tie
+      input type='submit' value='Again'
+    div.turn
+      div.turn-x
+      div.turn-o
+  h1 
+    span Tic
+    span Tac
+    span Toe
+
+  

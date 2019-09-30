@@ -1,0 +1,357 @@
+$size: 80px;
+$cb: 'input[type=checkbox]';
+$o: '~ .o, ~ .o ~ input';
+
+$color-x: #F38630;
+$color-o: #69D2E7;
+$color-border: #666666;
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body,
+form {
+  height: 100%;
+}
+
+body {
+  background: #f2f2f2;
+  counter-reset: turn 10;
+  display: flex;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 16px;
+}
+
+.board {
+  height: ($size * 3) + 2px;
+  margin: auto;
+  position: relative;
+  width: ($size * 3) + 2px;
+}
+
+h1 {
+  color: darken($color-o, 10%);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  margin: 20px 0 -50px;
+  text-align: center;
+  
+  span:nth-of-type(1),
+  span:nth-of-type(3) {
+    color: darken($color-x, 10%);
+  }
+}
+
+.boxes {
+  border: 1px solid $color-border;
+  display: flex;
+  flex-wrap: wrap;
+  height: ($size * 3) + 2px;
+  position: relative;
+  width: ($size * 3) + 2px;
+}
+
+/**
+ * Boxes
+ */
+
+#{$cb} {
+  appearance: none;
+  opacity: 0.01;
+  position: absolute;
+  z-index: 0;
+  
+  &.x:checked {
+    counter-increment: turn -10;
+  }
+  
+  &.o:checked {
+    counter-increment: turn 10;
+  }
+}
+
+@-moz-document url-prefix() {
+  #{$cb}:checked {
+    background: none;
+  }
+}
+
+input[type='submit'] {
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  height: auto;
+  padding: 8px 10px;
+  position: static;
+  width: auto;
+}
+
+label {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 1px $color-border;
+  cursor: pointer;
+  height: $size;
+  transition: background .2s;
+  width: $size;
+  
+  &:hover {
+    background-color: lighten($color-x, 25%);
+  }
+  
+  &.o {
+    &:hover {
+      background-color: lighten($color-o, 25%);
+    }
+  }
+}
+
+/**
+ * Checked Boxes
+ */
+@for $i from 1 through 18 {
+  #{$cb}:nth-of-type(#{$i}):checked ~ .controls {
+    $label: $i;
+    $bgColor: $color-x;
+    $bgImg: 'http://www.jerrylow.com/demo/ttt/ttt-x.svg';
+ 
+    @if $i > 9 {
+      $label: $i - 9;
+      $bgColor: $color-o;
+      $bgImg: 'http://www.jerrylow.com/demo/ttt/ttt-o.svg';
+    }
+    
+    .control.-x label:nth-of-type(#{$label}),
+    .control.-o label:nth-of-type(#{$label}) {
+      background-color: $bgColor;
+      background-image: url(#{$bgImg});
+      background-size: 50%;
+      cursor: not-allowed;
+      pointer-events: none;
+      z-index: 50 !important;
+    }
+  }
+}
+
+/**
+ * Turns
+ **/
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: calc(100% + 2ch);
+  z-index: 1;
+}
+
+.control {
+  &.-x {
+    overflow: hidden;
+    flex-grow: 1;
+    height: 100%;
+    width: 0;
+  }
+  
+  &.-o {
+    flex-basis: 100%;
+    white-space: nowrap;
+      
+    &:after {
+      content: counter(turn);
+      display: inline;
+      visibility: hidden;
+    }
+    
+    .control-labels {
+      width: $size * 3; 
+    }
+  }
+  
+  .control-labels {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+}
+
+.turn {
+  bottom: -11px;
+  display: flex;
+  flex-wrap: wrap;
+  left: -11px;
+  overflow: hidden;
+  position: absolute;
+  right: -11px;
+  top: -11px;
+  z-index: 0;
+  
+  .turn-x {
+    box-shadow: inset 0 0 0 10px lighten($color-x, 25%);
+    flex-grow: 1;
+    height: 100%;
+    width: 0;
+  }
+  
+  .turn-o {
+    box-shadow: inset 0 0 0 10px lighten($color-o, 25%);
+    color: lighten($color-o, 25%);
+    flex-basis: 100%;
+    box-sizing: border-box;
+    padding-left: calc(100% - 1ch);
+    
+    &:before {
+      content: counter(turn);
+    }
+  }
+}
+
+/**
+ * Done
+ **/
+@mixin doneMessage ($doneColor, $doneChar) {
+  ~ .done {
+    box-shadow: 0 0 0 10px lighten($doneColor, 25%);
+    border: 1px solid $color-border;
+    background: rgba($doneColor, .95);
+    color: darken($doneColor, 25%);
+    display: flex;
+    
+    .winner:after {
+      content: "#{$doneChar}";
+      color: darken($doneColor, 35%);
+    }
+    
+    input[type='submit'] {
+      background: darken($doneColor, 15%);
+    }
+  }
+  
+  ~ .tie,
+  ~ .turn {
+    display: none !important;
+  }
+}
+
+@mixin doneCheck($selector, $doneColor, $doneChar) {
+  /**
+   * ---
+   **/
+  #{$cb} {
+    &:nth-of-type(#{$selector}):checked + :checked + :checked {
+      @include doneMessage($doneColor, $doneChar);
+    }
+
+    &:nth-of-type(#{$selector}) + input + input + :checked + :checked + :checked {
+      @include doneMessage($doneColor, $doneChar);
+    }
+
+    &:nth-of-type(#{$selector}) + input + input + input + input + input + :checked + :checked + :checked {
+      @include doneMessage($doneColor, $doneChar);
+    }
+  }
+  
+  /**
+   * |||
+   */
+  #{$cb} {
+    &:nth-of-type(#{$selector}):checked + input + input + :checked + input + input + :checked {
+      @include doneMessage($doneColor, $doneChar);
+    }
+    
+    &:nth-of-type(#{$selector}) + :checked + input + input + :checked + input + input + :checked {
+      @include doneMessage($doneColor, $doneChar);
+    }
+    
+    &:nth-of-type(#{$selector}) + input + :checked + input + input + :checked + input + input + :checked {
+      @include doneMessage($doneColor, $doneChar);
+    }
+  }
+  
+  /**
+   * X
+   **/
+  #{$cb} {
+    &:nth-of-type(#{$selector}):checked + input + input + input + :checked + input + input + input + :checked {
+      @include doneMessage($doneColor, $doneChar);
+    } 
+    
+    &:nth-of-type(#{$selector}) + input + :checked + input + :checked + input + :checked {
+      @include doneMessage($doneColor, $doneChar);
+    }
+  }
+}
+
+@include doneCheck(1, $color-x, 'x');
+@include doneCheck(10, $color-o, 'o');
+
+.done {
+  align-items: center;
+  bottom: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  
+  .lead {
+    font-size: 16px;
+  }
+  
+  .winner {
+    font-size: 100px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+/**
+ * Tie
+ */
+.tie {
+  align-items: center;
+  background: linear-gradient(45deg, $color-x 0%, $color-x 50%, $color-o 50.1%);
+  bottom: 0;
+  color: white;
+  display: none;
+  flex-direction: column;
+  font-size: 30px;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 50;
+  
+  input[type='submit'] {
+    background: #333;
+    margin: 15px 0 0;
+  }
+}
+
+/**
+ * Tie
+ **/
+$tie: #{$cb + ':checked'};
+
+@for $i from 1 to 9 {
+  $tie: $tie + ' ~ #{$cb + ":checked"}';
+}
+
+#{$tie} {
+  ~ .tie {
+    display: flex;
+  }
+}
