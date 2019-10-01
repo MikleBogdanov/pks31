@@ -1,4 +1,4 @@
-/* body {
+body {
     font-family: sans-serif;
     margin: 0;
   }
@@ -119,4 +119,4 @@
   }
   .menu_active a:nth-child(3) {
     transform: translate(0%, 150%);
-  } */
+  }

@@ -3,6 +3,22 @@ body{
     margin: 0;
     padding: 0;
 }
+.header_menu{
+    width: 95%;
+    height: 10vh;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 0.5%;
+    margin-bottom: 0.3%;
+    background-color: #7b1fa2;
+    box-shadow: 0 0 20px rgba(0,0,0,1);
+}
+.section_header{
+    float: right;
+    width: 40%;
+    height: 10vh;
+}
+
 .menu_all{
     margin: 0 auto;
     width: 95%;
@@ -18,23 +34,23 @@ body{
     background-color: #ccffcc;
 }
 .section_1{
-    border: 2px dashed #000;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
+    border: 1px dashed #000;
+    /* border-top-right-radius: 25%;
+    border-bottom-right-radius: 25%; */
     position: relative;
     width: 30%;
-    height: 45vh;
+    height: 43.5vh;
     float: left;
     background-color: #ffcccc;
 }
 .card_1{
     position: absolute;
     margin: 0 auto;
-    margin-top: 10px;
-    margin-left: 5px;
+    margin-top: 5%;
+    margin-left: 2%;
     max-width: 70%;
     background-color:#ccc;
-    border-radius: 200px;
+    border-radius: 100%;
 }
 .section_2{
     width: 65%;
@@ -45,10 +61,153 @@ body{
 h2{
     text-align: center;
     font-size: 5vh;
-    margin-top: 15px;
-    margin-right: 40px;
+    margin-top: 2%;
+    margin-right: 5%;
     padding: 0;
 }
 .word_2{
     float: right;
+}
+
+.section_4{
+    float: left;
+    width: 100%;
+    height: 45vh;
+    background-color: #702cca;
+}
+.section_5{
+    float: left;
+    width: 40%;
+    height: 45vh;
+    margin: 0 auto;
+    background-color: #b092d6;
+}
+.un_section_1, .un_section_2, .un_section_3, .un_section_4{
+    font-size: 3vh;
+    width: 18%;
+    height: 12vh;
+    position: relative;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-color: #cfcccf;
+}
+.un_section_1{
+    margin: 1.5%;
+    margin-top: 23%;
+    margin-left: 8%;
+    float: left;
+    text-align: center;
+    background-color: #2d0194;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 20%;
+}
+.un_section_2{
+    margin: 1.5%;
+    float: left;
+    margin-top: 23%;
+    text-align: center;
+    background-color: #31dbdb;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 20%;
+}
+.un_section_3{
+    margin: 1.5%;
+    float: left;
+    margin-top: 23%;
+    text-align: center;
+    background-color: #da2121;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 20%;
+}
+.un_section_4{
+    margin: 1.5%;
+    float: left;
+    margin-top: 23%;
+    text-align: center;
+    background-color: #ee4259;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 20%;
+}
+.un_section_1:hover{
+    cursor: pointer;
+    display: block;
+    position: static;
+    background-color: #3e5eee;
+}
+.un_section_2:hover{
+    cursor: pointer;
+    display: block;
+    position: static;
+    background-color: #00b4a5;
+}
+.un_section_3:hover{
+    cursor: pointer;
+    display: block;
+    position: static;
+    background-color: #fc7fd6;
+}
+.un_section_4:hover{
+    cursor: pointer;
+    display: block;
+    position: static;
+    background-color: #ac0303;
+}
+
+.menu_all> .menu> .section_4> .section_5 p{
+    margin-top: 35%;
+}
+.section_6{
+    float: left;
+    width: 60%;
+    height: 45vh;
+    margin: 0 auto;
+    background-color: #7ee483;
+    color: #fff;
+}
+.menu_all> .menu> .section_4> .section_6> p{
+        text-align: center;
+        font-size: 3.5vh;
+        margin: 0;
+        padding: 0;
+}
+.menu_all> .menu> .section_4> .section_6 p:nth-child(1){
+    margin-top: 5%;
+    color: #2d0194;
+    text-shadow: 1px 0 0 #fff,
+    -1px 0 0 #fff, 0 1px 0 #fff,
+    0 -1px 0 #fff, 1px 1px #fff,
+    -1px -1px 0 #fff, 1px -1px 0 #fff,
+    -1px 1px 0 #fff;
+}
+.menu_all> .menu> .section_4> .section_6 p:nth-child(2){
+    margin-top: 5%;
+    color: #31dbdb;
+    text-shadow: 1px 0 0 #fff,
+    -1px 0 0 #fff, 0 1px 0 #fff,
+    0 -1px 0 #fff, 1px 1px #fff,
+    -1px -1px 0 #fff, 1px -1px 0 #fff,
+    -1px 1px 0 #fff;
+}
+.menu_all> .menu> .section_4> .section_6 p:nth-child(3){
+    margin-top: 5%;
+    color: #da2121;
+    text-shadow: 1px 0 0 #fff,
+    -1px 0 0 #fff, 0 1px 0 #fff,
+    0 -1px 0 #fff, 1px 1px #fff,
+    -1px -1px 0 #fff, 1px -1px 0 #fff,
+    -1px 1px 0 #fff;
+}
+.menu_all> .menu> .section_4> .section_6 p:nth-child(4){
+    margin-top: 5%;
+    color: #ee4259;
+    text-shadow: 1px 0 0 #fff,
+    -1px 0 0 #fff, 0 1px 0 #fff,
+    0 -1px 0 #fff, 1px 1px #fff,
+    -1px -1px 0 #fff, 1px -1px 0 #fff,
+    -1px 1px 0 #fff;
 }
