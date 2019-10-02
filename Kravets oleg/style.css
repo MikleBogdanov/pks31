@@ -1,5 +1,8 @@
 body{
 	box-sizing: border-box;
+	background-image: url('https://img2.goodfon.ru/original/2560x1600/9/c1/more-solnce-zakat-1843.jpg');
+	-webkit-background-size: cover;
+	background-size: cover;
 }
 
 .wrap{
@@ -45,7 +48,7 @@ nav a:hover{
 }
 .img{
 	display: inline-block;
-	background-image: url();
+	background-image: url('https://avatars.mds.yandex.net/get-pdb/1811947/2c24a1f5-f2d7-4105-87ea-894ce1cde5ee/s1200');
 	background-size: cover;
 	border: 1px solid black;
 	border-radius: 50%;
