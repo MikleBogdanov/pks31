@@ -1,3 +1,7 @@
+body{
+    background-color: #000;
+}
+
 .pad{
     padding-left: 50px;
     padding-top: 8px;
@@ -7,8 +11,8 @@
 
 
 .item-img {
-     
-    height: 500px; 
+    width: 100%;
+    height: 650px;
     background-repeat: no-rpeat;
     background-position: center;
     -webkit-background-size: cover; 
@@ -23,4 +27,39 @@
     display: flex;
     justify-content: center;
     text-align: center; 
+}
+
+.logo{
+    border: 2px solid #000;
+    border-radius: 100px;
+    width: 10vh;
+    height: 10vh;
+}
+
+.arbet{
+
+    display: flex;
+    position: relative;
+    margin-right: 30px;
+    float: right;
+}
+
+.arbet_text{
+
+    padding-top: 45px;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+.container_logo{
+    padding-top: 20px;
+    padding-right: 10px
+}
+
+footer{
+    padding-top: 30px;
+    text-align: center;
+    height: 62px;
+    background: #000;
+    clear: both;
 }
