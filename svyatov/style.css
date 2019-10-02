@@ -24,24 +24,24 @@ body{
 }
 
 .text{
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     text-align: center; 
 }
 
 .logo{
-    border: 2px solid #000;
+    border: 2px solid rgb(0, 217, 255);
     border-radius: 100px;
     width: 10vh;
     height: 10vh;
 }
 
 .arbet{
-
     display: flex;
     position: relative;
-    margin-right: 30px;
-    float: right;
+    margin-left: 30px;
+    
 }
 
 .arbet_text{
@@ -56,7 +56,34 @@ body{
     padding-right: 10px
 }
 
+.fichi{
+    padding-top: 45px;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+summary{
+    display: flex
+}
+
+.fichi_link{
+    background-color: aliceblue;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    backface-visibility: hidden;
+    border-radius: 180px;
+}
+
 footer{
+    margin-top: 30px;
     padding-top: 30px;
     text-align: center;
     height: 62px;

@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.section{
+    background-color: mediumblue;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.heading{
+    margin-left: 20%;
+}
+
+.phone, .tablet, .descktop{
+    background-color: #fff;
+} 
+
+.phone{
+    width: 200px;
+    height: 280px;
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    background-color: #fff url('http://jquerykiller.ru/img/mobile.svg')
+}
