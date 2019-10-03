@@ -1,0 +1,36 @@
+body{
+	background-color: #3d385a;
+	text-decoration: none;
+	font-size: 24px;
+	font-family: sans-serif;
+}
+.container{
+	width: 680px;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-wrap: wrap;
+	transition: 1s;
+	transform: rotateX(55deg) rotateZ(-45deg) rotateY(10deg);
+	transform-style: preserve-3d;
+}
+.container-origin{
+	transform: rotate(0);
+}
+.section{
+	perspective: 1000px;
+}
+img{
+	max-width: 100%;
+}
+.card{
+	width: 200px;
+	margin: 10px;
+	transition: 0.3s;
+}
+.card:hover{
+	cursor:  pointer;
+	transform: translateZ(20px);
+}

@@ -1,3 +1,7 @@
+body{
+    background-color: #000;
+}
+
 .pad{
     padding-left: 50px;
     padding-top: 8px;
@@ -7,8 +11,8 @@
 
 
 .item-img {
-     
-    height: 500px; 
+    width: 100%;
+    height: 650px;
     background-repeat: no-rpeat;
     background-position: center;
     -webkit-background-size: cover; 
@@ -20,7 +24,69 @@
 }
 
 .text{
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     text-align: center; 
+}
+
+.logo{
+    border: 2px solid rgb(0, 217, 255);
+    border-radius: 100px;
+    width: 10vh;
+    height: 10vh;
+}
+
+.arbet{
+    display: flex;
+    position: relative;
+    margin-left: 30px;
+    
+}
+
+.arbet_text{
+
+    padding-top: 45px;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+.container_logo{
+    padding-top: 20px;
+    padding-right: 10px
+}
+
+.fichi{
+    padding-top: 45px;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+summary{
+    display: flex
+}
+
+.fichi_link{
+    background-color: aliceblue;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    backface-visibility: hidden;
+    border-radius: 180px;
+}
+
+footer{
+    margin-top: 30px;
+    padding-top: 30px;
+    text-align: center;
+    height: 62px;
+    background: #000;
+    clear: both;
 }
