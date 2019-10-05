@@ -7,13 +7,18 @@
     <title>Alexey</title>
     <link rel="stylesheet" href="page.css">
     <link rel="stylesheet" href="learn7.css">
+    <link rel="stylesheet" href="learn4.css">
+    <link rel="stylesheet" href="buttonback.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/f5c5751c96.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="learn4.css">
 </head>
 <body>
         <div class="header_menu">
-            <div class="section_header">
+            <div class="section_header_1">
+                <a href="#">main</a>
+                <a href="#">contacts</a>
+            </div>
+            <!-- <div class="section_header">
                 <div class="section">
                         <div class="menu-block">
                           <nav class="menu-nav">
@@ -27,7 +32,7 @@
                             <span></span>
                           </a>
                           
-                        </div>
+                        </div> -->
                 </div>          
             </div>
         </div>
@@ -50,21 +55,14 @@
                         <div class="un_section_4"><p>JQUERY</p></div>
                     </div>
                     <div class="section_6">
-                        <p>изучил HTML</p>
-                        <p>изучил CSS</p>
-                        <p>изучил JS</p>
-                        <p>изучил JQUERY</p>
+                            <p>изучил HTML</p>
+                            <p>изучил CSS</p>
+                            <p>изучил JS</p>
+                            <p>изучил JQUERY</p>
                     </div>
                 </div>
+                <!-- <p>coke</p> -->
             </div>
-            <div class="menu_2">
-                    <div class="section_7">
-                        изучение
-                    </div>
-                    <div class="section_8">
-                        повторение
-            </div>
-        </div>
     </div>
     <div class="footer">
         <div class="section_footer_2">
@@ -84,6 +82,12 @@
                 $(this).toggleClass('menu-btn_active');
                 $('.menu-nav').toggleClass('menu-nav_active');
             });
-        </script>
+    </script>
+    <script>
+        $('#click').click(function(){
+            $('#main').show(); 
+            $('#click').hide(); 
+        });
+    </script>
 </body>
 </html>
