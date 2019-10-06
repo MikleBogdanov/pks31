@@ -1,0 +1,121 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+.section {
+  height: 100vh;
+  background-color: #7b1fa2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  z-index: 3;
+}
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+  position: absolute;
+  top: 50%; margin-top: -1px;
+  left: 50%; margin-left: -10px;
+  width: 20px;
+  height: 2px;
+  background-color: #222;
+}
+.menu-btn span::before,
+.menu-btn span::after {
+  content: '';
+  display: block;
+  transition: 0.2s;
+}
+.menu-btn span::before {
+  transform: translateY(-5px);
+}
+.menu-btn_active span {
+  height: 0;
+}
+.menu-btn span::after {
+  transform: translateY(5px);
+}
+
+.menu-btn_active span:before {
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+.menu-btn_active span:after {
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+
+.menu-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-nav {
+  background-color: #fff;
+  height: 50px;
+  
+}
+.menu-nav__link {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 20px;
+}
+.menu-nav__link {
+  transition: 0.5s;
+  transform-origin: right center;
+  transform: translateX(50%);
+  opacity: 0;
+}
+.menu-nav__link_active {
+  transform: translateX(0%);
+  opacity: 1;
+}
+.menu-block {
+  position: relative;
+}
+.menu a {
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid;
+  transition: 0.4s;
+  position: absolute;
+  left: calc(50% - 15px);
+  top: calc(50% - 15px);
+  z-index: 0;
+}
+.menu a:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.menu a:nth-child(2) {
+  transition-delay: 0.2s;
+  
+}
+.menu a:nth-child(3) {
+  transition-delay: 0.3s;
+
+}
+
+.menu_active a:nth-child(1) {
+  transform: translate(150%, 0%);
+}
+.menu_active a:nth-child(2) {
+  transform: translate(100%, 100%);
+}
+.menu_active a:nth-child(3) {
+  transform: translate(0%, 150%);
+}
