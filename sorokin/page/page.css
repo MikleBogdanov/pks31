@@ -160,6 +160,7 @@ h2{
 
 .menu_all> .menu> .section_4> .section_5 p{
     margin-top: 35%;
+    /* clear: both; */
 }
 .section_6{
     float: left;
@@ -210,4 +211,112 @@ h2{
     0 -1px 0 #fff, 1px 1px #fff,
     -1px -1px 0 #fff, 1px -1px 0 #fff,
     -1px 1px 0 #fff;
+}
+
+.menu_2{
+    width: 100%;
+    height: 10vh;
+    margin: 0 auto;
+    background-color: #ffccff;
+}
+
+.footer{
+    width: 95%;
+    height: 10vh;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 0.5%;
+    margin-bottom: 0.3%;
+    background-color: #281530;
+    box-shadow: 0 0 20px rgba(0,0,0,1);
+}
+.footer> .section_footer_1> p{
+    color: #ffffff;
+    text-align: center;
+    padding-top: 2%;
+}
+.section_footer_1{
+    width: 40%;
+    height: 10vh;
+    /* background-color: #042704; */
+    float: left;
+}
+.section_footer_2{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 30%;
+    height: 10vh;
+    float: left;
+    /* background-color: #0c4b4b; */
+}
+.footer > .section_footer_2 > a{
+    margin-top: 5%;
+    color: #fc7fd6;
+    font-size: 3.5vh;
+}
+.footer > .section_footer_2 > a:nth-child(1){
+    margin-right: 3%;
+    color: #fff;
+}
+.footer > .section_footer_2 > a:nth-child(2){
+    margin-right: 3%;
+    color: #fff;
+}
+.footer > .section_footer_2 > a:nth-child(3){
+    margin-right: 3%;
+    color:rgb(245, 212, 27);
+}
+.footer > .section_footer_2 > a:nth-child(4){
+    color: #fff;
+}
+.card_footer_1{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 9%;
+    height: 4vh;
+    background: #3a6df8 ;
+    margin-right: 2%;
+    border: 1px solid #fff;
+    border-radius: 40%;
+}
+.card_footer_2{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 9%;
+    height: 4vh;
+    background: radial-gradient(circle farthest-corner at left bottom, 
+    yellow, orange, rgb(196, 42, 196), rgb(107, 3, 148), rgb(46, 2, 46), #3717a8);
+    margin-right: 2%;
+    border: 1px solid #fff;
+    border-radius: 40%;
+}
+.card_footer_3{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 9%;
+    height: 4vh;
+    background: #0831a3 ;
+    margin-right: 2%;
+    border: 1px solid #fff;
+    border-radius: 40%;
+}
+
+.card_footer_4{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 9%;
+    height: 4vh;
+    background: #000 ;
+    margin-right: 2%;
+    border: 1px solid #fff;
+    border-radius: 40%;
 }

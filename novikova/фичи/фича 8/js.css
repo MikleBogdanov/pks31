@@ -1,0 +1,51 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body
+{
+	background-color: #f1f1f1;
+	margin: 25px auto;
+	font-family: sans-serif;
+}
+
+span.title
+{
+	display: block;
+	text-align: center;
+	margin: 15px auto;
+}
+
+.basic
+{
+	text-transform: uppercase;
+	width: 130px;
+	height: 65px;
+	text-align: center;
+	line-height: 65px;
+	margin: 10px auto;
+	position: relative;
+	cursor: pointer;
+}
+
+svg 
+{
+	position: absolute;
+	top:0;
+	left: 0;
+}
+
+svg rect
+{
+	stroke: #536DFE;
+	stroke-width: 7;
+	transition: 0.8s;
+	stroke-dasharray: 400, 0;
+}
+
+.basic:hover svg rect
+{
+	stroke-width: 10;
+	stroke-dasharray: 35, 245;
+	stroke-dashoffset: 38;
+}

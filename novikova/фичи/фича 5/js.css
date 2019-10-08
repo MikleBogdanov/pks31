@@ -1,0 +1,41 @@
+body
+{
+	margin:0;
+	background-color: #3d385a;
+}
+
+.container
+{
+	width: 680px;
+	margin:auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	transition: 1s;
+	transform: rotateX(45deg) rotateZ(-45deg) rotateY(20deg);
+	transform-style: preserve-3d;
+}
+
+img{
+	max-width: 100%;
+}
+
+.card
+{
+	width: 200px;
+	transition: 0.3s;
+	margin:10px;
+}
+
+.section
+{
+	perspective: 1000px;
+}
+
+.card:hover
+{
+	cursor: pointer;
+	transform: translateZ(20px);
+}
