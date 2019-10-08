@@ -1,0 +1,46 @@
+html
+{
+	background: url(54779a7f9eded.jpg) no-repeat fixed center / cover;
+	position: relative;
+	overflow-y: scroll;
+}
+
+body
+{
+	background: inherit;
+	display: flex;
+	min-height: 100vh;
+}
+
+.block 
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin: auto;
+	width: 400px;
+	height: 250px;
+	border: 15px solid rgba(255, 255, 255, 0.15);
+	box-shadow: 1px 1px 4px rgba(14, 14, 14, .3);
+	text-shadow: 0 1px 0 #333;
+	background: inherit;
+}
+
+.block * {
+	position: relative;
+}
+
+.block:before
+{
+	content: '';
+	position: absolute;
+	top:0;
+	left:0;
+	bottom: 0;
+	right: 0;
+	background: inherit;
+	filter: blur(5px);
+	filter: url(#blur);
+}

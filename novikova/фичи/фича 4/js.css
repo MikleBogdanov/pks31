@@ -1,0 +1,68 @@
+body
+{
+	font-family: sans-serif;
+	font-weight: 300;
+	font-size:24px;
+}
+
+.links{
+	margin: auto;
+	width: 80%;
+}
+
+a
+{
+	text-decoration: none;
+	position: relative;
+
+}
+
+.left a::before{
+	content: '';
+	bottom: 0px;
+	left: 0px;
+	position: absolute;
+	width: 0%;
+	height: 2px;
+	background-color: #000;
+	transition: 0.2s;
+}
+
+.left a:hover:before
+{
+	width: 100%;
+}
+
+.right a::before{
+	content: '';
+	bottom: 0px;
+	left: 0px;
+	position: absolute;
+	width: 0%;
+	height: 2px;
+	background-color: #000;
+	transition: 0.2s;
+}
+
+.right a:hover:before
+{
+	right: 0px;
+	width: 100%;
+}
+
+.center a::before{
+	content: '';
+	bottom: 0px;
+	right: 0px;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #000;
+	transition: 0.2s;
+	transform: scaleX(0);
+}
+
+.center a:hover:before
+{
+	transform: scaleX(1);
+}

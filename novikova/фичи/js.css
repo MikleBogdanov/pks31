@@ -1,0 +1,88 @@
+header
+{padding-top: 15px;
+	height: 35%;
+	background-color: green;
+	background-image: url(картинки%20бленд/Nature_Other_waterfall_019570_.jpg);
+}
+
+.foto
+{
+	background: red;
+	width: 15%;
+	height: 80%;
+	margin-top: 1%;
+	margin-left: 100px;
+	border: 3px solid black;
+}
+
+.obomne
+{
+	padding: 5px;
+	color: white;
+	width: 70%;
+	height: 80%;
+	margin-top: -15%;
+	margin-left: 25%;
+	
+	
+}
+
+.vid
+{
+	
+	margin-left: 43%;
+
+}
+
+video
+{
+	width: 100%;
+	height: 50%;
+}
+
+.blend
+{
+	padding: 5px;
+	margin-left: 5%;
+	margin-top: -36%;
+}
+
+.center
+{
+	margin-top: 1%;
+	margin-left: 25%;
+	width:70%;
+	padding:10px;
+	background-color: yellow;
+	background-image: url(картинки%20бленд/s1200.jpg);
+	border:3px solid black;
+}
+ 
+a
+{
+	padding: 3px;
+	text-decoration: none;
+	color:black;
+	background:white;
+	border: 1px solid black;
+}
+
+a:hover
+{
+	color:white;
+	background: black;
+	border: 1px solid white;
+}
+
+footer
+{
+	margin-top: 1%;
+	height: 10%;
+	background-color: grey;
+	background-image: url(картинки%20бленд/54779a7f9eded.jpg);
+}
+
+body
+{
+	background-color:#fdf5e6;
+}
