@@ -49,16 +49,25 @@
         <div class="menu">
                 <div class="section_4">
                     <div class="section_5">
+                            
                         <div class="un_section_1"><p>HTML</p></div>
                         <div class="un_section_2"><p>CSS</p></div>
                         <div class="un_section_3"><p>JS</p></div>
                         <div class="un_section_4"><p>JQUERY</p></div>
                     </div>
                     <div class="section_6">
-                            <p>изучил HTML</p>
-                            <p>изучил CSS</p>
-                            <p>изучил JS</p>
-                            <p>изучил JQUERY</p>
+                            <label for="pseudoBtn" class="btn1">"Кнопка"</label>
+                            <input type="checkbox" id="pseudoBtn">
+                            <div class="text">изучил HTML</div>
+                            <label for="pseudoBtn" class="btn2">"Кнопка"</label>
+                            <input type="checkbox" id="pseudoBtn">
+                            <div class="text">изучил CSS</div>
+                            <label for="pseudoBtn" class="btn3">"Кнопка"</label>
+                            <input type="checkbox" id="pseudoBtn">
+                            <div class="text">изучил JS</div>
+                            <label for="pseudoBtn" class="btn4">"Кнопка"</label>
+                            <input type="checkbox" id="pseudoBtn">
+                            <div class="text">изучил JQUERY</div>
                     </div>
                 </div>
                 <!-- <p>coke</p> -->
@@ -82,12 +91,6 @@
                 $(this).toggleClass('menu-btn_active');
                 $('.menu-nav').toggleClass('menu-nav_active');
             });
-    </script>
-    <script>
-        $('#click').click(function(){
-            $('#main').show(); 
-            $('#click').hide(); 
-        });
     </script>
 </body>
 </html>
