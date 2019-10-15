@@ -171,16 +171,15 @@ h2{
 
 .menu_all> .menu> .section_4> .section_5 p{
     margin-top: 35%;
-    /* clear: both; */
 }
-.section_6{
-    float: left;
-    width: 60%;
-    height: 45vh;
-    margin: 0 auto;
-    background-color: #7ee483;
-    color: #fff;
+
+.section_7{
+    text-decoration: none;
+    width: 50%;
+    height: 10vh;
+    background: #f333f3;
 }
+
 .menu_all> .menu> .section_4> .section_6> p{
         text-align: center;
         font-size: 3.5vh;
@@ -223,25 +222,6 @@ h2{
     -1px -1px 0 #fff, 1px -1px 0 #fff,
     -1px 1px 0 #fff;
 }
-
-/* .menu_2{
-    width: 100%;
-    height: 50vh;
-    margin: 0 auto;
-    background-color: #ffccff;
-}
-.section_7{
-    float: right;
-    width: 50%;
-    height: 10vh;
-    background: #33cf33;
-}
-.section_8{
-    float: left;
-    width: 40%;
-    height: 10vh;
-    background-color: #432fc3;
-} */
 
 .footer{
     width: 95%;
