@@ -1,0 +1,22 @@
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to left bottom, #fcf, #ccf);
+    background-repeat: no-repeat;
+}
+
+#heading{
+    font-size: 5vh;
+    background: linear-gradient(45deg, #ff1414, #44ff1e 50%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+#distance{
+    font-size: 5vh;
+    background: linear-gradient(45deg, #05038f, #eb1052 20%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+#map{
+    border: 3px solid #000;
+}

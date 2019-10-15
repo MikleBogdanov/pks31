@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>КЛАДМЭН</title>
+    <link rel="stylesheet" href="css/kladman.css">
+</head>
+<body>
+    <h1 id="heading">Найди клад, чтоб не спалили!</h1>
+
+    <img  id="map" width="400" height="400" 
+    src="https://library.kissclipart.com/20180905/igw/kissclipart-different-kinds-of-maps-clipart-treasure-map-9f63a807fbe70d43.png">
+
+    <p id="distance"></p>
+
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    
+    <script>
+        var getRandomNumber = function (size) {
+            return Math.floor(Math.random()*size);
+        };
+
+        var getDistance = function (event, target) {
+            var diffX = event.offsetX - target.x;
+            var diffY = event.offsetY - target.y;
+            return Math.sqrt((diffX*diffX)+(diffY*diffY));
+        };
+
+        var getDistanceHint = function (distance) {
+            if (distance < 10) {
+                return "Синяя изолента!";
+            }else if (distance < 20) {
+                return "Ищи под лавкой";
+            }else if (distance < 40) {
+                return "рядом";
+            }else if (distance < 80) {
+                return "не далеко...";
+            }else if (distance < 160) {
+                return "далеко ещё";
+            }else if (distance < 320){
+                return "сдесь точно нет";
+            }else{
+                return "тебя спалили, беги!";
+            }
+        };
+
+        var width = 400;
+        var height = 400;
+        var clicks = 0;
+
+        var target = {
+            x: getRandomNumber(width),
+            y: getRandomNumber(height)
+        };
+
+        $("#map").click(function (event) {
+            clicks++;
+            var distance = getDistance(event, target);
+            var distanceHint = getDistanceHint(distance);
+            
+            $("#distance").text(distanceHint);
+
+            if (distance < 8) {
+                alert("Клад найден, поделись с друзьями! накликал: " + clicks);
+            }
+        });
+    </script>
+</body>
+</html>

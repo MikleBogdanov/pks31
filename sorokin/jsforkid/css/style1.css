@@ -1,0 +1,10 @@
+body{
+    background:linear-gradient(to bottom left, #5e125e, #fff);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1000px;
+}
+h1{
+    color: #fff;
+    /* text-align: center; */
+}
