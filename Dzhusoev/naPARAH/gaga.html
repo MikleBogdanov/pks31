@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom-дет</title>
+    
+</head>
+<body>
+  <h1 id="main-heading">Helloy gays</h1>
+  <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
+    <script>
+        var newHeadingText = prompt("Напиши чего-нибудь:");
+         $("#main-heading").text(newHeadingText);
+         $("body").append("<p>и ещё</p>");
+         for (var i = 0; i < 3; i++) {
+             var hobby = prompt("Ну напиши");
+             $("body").append("<p>" + hobby + "</p>");
+         }
+         $("h1").fadeOut(3000);
+         $("h1").text("Текст пропадёт").fadeOut(3000);
+         $("h1").fadeOut(3000).fadeIn(2000);        
+    </script>
+
+</body>
+</html>

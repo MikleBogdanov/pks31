@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dr9n'</title>
+</head>
+<body>
+     <script>
+         var counter = 1;
+         var printMessage = function () {
+             console.log("Смотришь в консоль" + counter + "sec");
+             counter++;          
+         };
+         var intervalId = setInterval(printMessage, 1000);
+        //  clearInterval(intervalId);
+    </script> 
+</body>
+</html>
