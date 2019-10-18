@@ -51,7 +51,7 @@ header {
 }
 
 h1{
-    font-size: 41px;
+    font-size: 35px;
     text-transform: uppercase;
     text-align: center;
     font-size: bold;
@@ -76,6 +76,60 @@ h1 span {
     
 }
 
+.category-wrap {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.65);
+    width: 200px;
+    color: #fff;
+    box-shadow: 2px 2px 8px rgba(0,0,0,.1);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .category-wrap h3 {
+    font-size: 16px;
+    color: white;
+    margin: 0 0 10px;
+    padding: 0 5px;
+    position: relative;
+  }
+  .category-wrap h3:after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background:rebeccapurple;
+    position: absolute;
+    right: 5px;
+    bottom: 2px;
+    box-shadow: -8px -8px rebeccapurple, 0 -8px red, -8px 0 red;
+  }
+  .category-wrap ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; 
+    border-top: 1px solid rgba(0,0,0,.3);
+  }
+  .category-wrap li {margin: 12px 0 0 0px;}
+  .category-wrap a {
+    text-decoration: none;
+    display: block;  
+    font-size: 13px;
+    color: #fff;
+    padding: 5px;
+    position: relative;
+    transition: .3s linear;
+  }
+  .category-wrap a:after {
+    content:"\f18e";
+    font-family: FontAwesome;
+    position: absolute;
+    right: 5px;
+    color: white;
+    transition: .2s linear;
+  }
+  .category-wrap a:hover {
+    background: rebeccapurple;
+    color: white;
+  }
+
 .mer{
     background:url(../img/4.jpg)  no-repeat;
     background-size:100%;
@@ -88,4 +142,5 @@ h1 span {
 }
 .cont {
     background: rgba(0, 0, 0, 0.65);
+    height: 200px;
 }
