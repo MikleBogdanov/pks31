@@ -1,0 +1,318 @@
+@brand-font: 'Oswald',sans-serif; 
+/*серый фон страницы*/
+@body-bg: #f8f8f8; 
+/*специфический голубой фон данного дизайна*/
+@ brand-primary: #29c5e6; 
+/*фон панелей*/
+@panel-bg: #f3f3f3;
+/*цвет рамки панелей*/
+@panel-inner-border: #e7e7e7;
+/*убираем скругление у блоков*/
+@border-radius-base: 0;
+/*первичные кнопки имеют голубой фон*/
+@btn-primary-bg: @brand-primary; 
+/*если ширина экрана больше 992px, то ширина контейнера 960px*/
+@container-md: 960px; 
+/*если ширина экрана больше 1200px, то ширина контейнера так же 960px*/
+@container-lg: @container-md; 
+/*основным шрифтом будет Tahoma*/
+@font-family-base: Tahoma, sans-serif;
+/*задаем базовый размер*/
+@font-size-base: 12px; 
+/*основной цвет текста на странице*/
+@text-color: #8f8f8f;
+/*серый фон текстовых полей*/
+@input-bg: @panel-bg;
+/*серая рамка текстовых полей*/
+@input-border: @panel-inner-border;
+/*серый цвет текста в полях*/
+@input-color: #b2b2b2;
+@import "bootstrap/bootstrap.less";
+@import "variables.less";
+/*высота навигационного меню*/
+@navbar-height: 37px;
+
+/*задаем  побольше горизонтальный отступ*/
+@nav-link-padding: 10px 30px;
+
+/*фон для пунктов меню*/
+@navbar-default-bg: @panel-bg;
+
+/*цвет текста в пунктах меню*/
+@navbar-default-link-color: #b2b2b2;
+
+/*и при наведении мышки – такой же*/
+@navbar-default-link-hover-color: @navbar-default-link-color;
+
+/*фон активного пункта меню – наш специфический голубой цвет*/
+@navbar-default-link-active-bg: @brand-primary;
+
+/*цвет текста активного пункта меню*/
+@navbar-default-link-active-color: #fff;
+@list-group-bg: @panel-bg;
+@list-group-border: @panel-inner-border;
+@import "bootstrap/bootstrap.less";
+@import "variables.less";
+
+p {
+    margin: 20px 0;
+}
+
+.form-control {
+	box-shadow: none;
+}
+
+.btn {
+	font-family: @brand-font;
+}
+
+.panel {
+  box-shadow: none;
+
+  .panel-heading {
+      font: 14px @brand-font;
+      text-transform: uppercase;
+      padding: 10px;
+  }
+
+  .panel-body {
+      padding: 10px;
+  }
+}
+
+body {
+  	background-image: url(../images/bg.png);
+	border-top: 5px solid #7e7e7e;
+
+	.wrapper {
+		padding: 0 0 50px 0;
+
+		header {
+			padding: 20px 0;
+
+            .form-search {
+              width: 200px;
+            }
+		}
+
+		.navbar a {
+		  	font: 14px @brand-font;
+			text-transform: uppercase;
+		}
+
+		.heading {
+		  	background: transparent url(../images/h1-bg.png);
+			height: 40px;
+			margin: 30px 0;
+			padding-left: 20px;
+
+			h1 {
+			  	background: url(../images/bg.png);
+			  	color: #7e7e7e;
+				display: inline-block;
+				font: normal 40px/40px @brand-font;
+				margin: 0;
+				padding: 0 10px;
+				text-transform: uppercase;
+			}
+		}
+
+        .submenu {
+            margin-bottom: 30px;
+
+            li {
+                display: list-item;
+                font: 300 14px @brand-font;
+                list-style-position: inside;
+                list-style-type: square;
+                padding: 10px;
+                text-transform: uppercase;
+
+                &.active {
+                    color: @brand-primary;
+                }
+
+                a {
+                    color: @text-color;
+                    text-decoration: none;
+                    &:hover {
+                        color: @text-color;
+                    }
+                }
+            }
+        }
+
+        .jumbotron {
+            border-radius: 0;
+            padding: 0;
+            margin: 0;
+
+            blockquote {
+                border-left: none;
+
+                p {
+                    font: 300 italic 33px @brand-font;
+                    text-transform: uppercase;
+                    margin-bottom: 0;
+                }
+
+                small {
+                    text-align: right;
+                    color: #1D8EA6;
+                    font: 300 20px @brand-font;
+
+                    &:before {
+                      content: '';
+                    }
+                }
+            }
+        }
+
+        h2 {
+            background: none repeat scroll 0 0 #29C5E6;
+            color: #fff;
+            font: 300 30px @brand-font;
+            padding: 0 10px;
+            text-transform: uppercase;
+        }
+
+	  	.team {
+			.row {
+			  	margin-top: 20px;
+
+				.col {
+				  	white-space:  nowrap;
+
+				  	.thumbnail {
+						margin-bottom: 5px;
+				  	}
+				}
+
+				.col-md-offset-1 {
+				  	margin-left: 3.7%;
+				}
+
+				.caption {
+				  	h3 {
+						font: 300 16px @brand-font;
+						margin: 0;
+				  	}
+
+				  	p {
+						font: 300 14px @brand-font;
+						color: @brand-primary;
+						margin: 0;
+				  	}
+				}
+			}
+		}
+	}
+
+	footer {
+	  	background: #7e7e7e;
+	  	color: #dbdbdb;
+	  	font-size: 11px;
+	  	line-height:  13px;
+
+	  	.container {
+			height: 110px;
+			padding: 10px 0;
+
+			h3 {
+			  	border-bottom: 1px solid #919191;
+			  	color: #ffffff;
+			  	font-size: 14px;
+			  	line-height: 21px;
+			  	font-family: @brand-font;
+			  	margin: 0 0 10px;
+			  	text-transform: uppercase;
+			}
+
+			p {
+			  	margin: 5px 0;
+			}
+
+			.twitter {
+			  	p {
+					padding-right: 15px;
+				}
+
+			  	time a {
+					color: #b4aeae;
+					text-decoration: underline;
+			  	}
+			}
+
+			a {
+			  	color: #dbdbdb;
+			}
+
+			.sitemap a {
+			  	display: block;
+			  	font-size: 12px;
+			 	margin-bottom: 5px;
+			}
+
+			.social {
+			  	.social-icon {
+					width: 30px;
+					height: 30px;
+					background: url(../images/social.png) no-repeat;
+					display: inline-block;
+					margin-right: 10px;
+			  	}
+
+				.social-icon-small  {
+					width: 16px;
+					height: 16px;
+					background: url(../images/social-small.png) no-repeat;
+					display: inline-block;
+					margin: 5px 6px 0 0;
+			  	}
+
+			  	.twitter {
+					background-position: 0 0;
+			  	}
+
+			  	.facebook {
+					background-position: -30px 0;
+			  	}
+
+			  	.google-plus {
+					background-position: -60px 0;
+			  	}
+
+			  	.vimeo {
+					background-position: 0 0;
+			  	}
+
+			  	.youtube {
+					background-position: -16px 0;
+			  	}
+
+			  	.flickr {
+					background-position: -32px 0;
+			  	}
+
+			  	.instagram {
+					background-position: -48px 0;
+			  	}
+
+			  	.rss {
+					background-position: -64px 0;
+			  	}
+			}
+
+			.footer-logo {
+			  	float: right;
+			  	margin-top: 20px;
+			  	font-size: 10px;
+			  	text-align: right;
+
+			  	a {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
