@@ -1,0 +1,182 @@
+/* adds some margin below the link sets  */
+.navbar .dropdown-menu div[class*="col"] {
+   margin-bottom:1rem;
+   position: fixed;
+}
+
+.navbar .dropdown-menu {
+  border:none;
+}
+
+/* breakpoint and up - mega dropdown styles */
+@media screen and (min-width: 992px) {
+  
+  /* remove the padding from the navbar so the dropdown hover state is not broken */
+.navbar {
+  padding-top:0px;
+  padding-bottom:0px;
+}
+
+/* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
+.navbar .nav-item {
+  padding:.5rem .5rem;
+  margin:0 .25rem;
+}
+
+/* makes the dropdown full width  */
+.navbar .dropdown {position:static;}
+
+.navbar .dropdown-menu {
+  width:100%;
+  left:0;
+  right:0;
+/*  height of nav-item  */
+  top:45px;
+}
+  
+  /* shows the dropdown menu on hover */
+.navbar .dropdown:hover .dropdown-menu, .navbar .dropdown .dropdown-menu:hover {
+  display:block!important;
+}
+  
+  .navbar .dropdown-menu {
+    border: 1px solid rgba(0,0,0,.15);
+    background-color: #fff;
+  }
+
+}
+.container{
+  width: auto;
+  max-width: 1900px;
+}
+
+.rb .about{
+
+  margin: 6% 0;
+    font-size: 42px;
+}
+.rb span{
+  display: block;
+  border-bottom: 2px solid #17daa3;
+  width: 2%;
+  margin: 2% auto;
+
+}
+.rb .us {
+  display: block;
+  margin-top: 3%;
+  font-size: 18px;
+}
+.rb-tb{
+  margin-top: 6%;
+}
+.bot {
+  min-width: 150px;
+  margin: 8%;
+}
+.arr{background-color: lightgrey; margin: auto; padding: 20px; border-radius: 50%;}
+section h1{ font-size: 18px; }
+section {font-size: 12px; }
+.trax{
+  margin-top: 6%;
+}
+.trax a{text-decoration: none; width: 10%; height: auto; font-size: 24px; border-radius: 24%; padding: 4%;}
+.trax a:hover{
+  background-color: #17daa3;
+}
+.trax a:active{
+  background-color: #17daa3;
+}
+.trax {
+  margin: 10%;
+}
+.photo-text {display: inline-block;}
+
+.photo-text h1{display: block;}
+.trax img{ width: auto; }
+.textslider{
+  margin-top: 6%;
+
+  max-width: 1900px;
+  width: auto;
+  height: 600px;
+}
+.rd{
+    background-image: url(img/back.jpg);
+}
+
+.card {
+ margin: 0 auto;
+}
+.card .carousel-item {
+ height: 200px;
+}
+.card .carousel-caption {
+ padding: 0;
+ right: 0;
+ left: 0;
+ color: #3d3d3d;
+}
+.card .carousel-caption h3 {
+ color: #3d3d3d;
+}
+.card .carousel-caption p {
+ line-height: 30px;
+}
+.card .carousel-caption .col-sm-3 {
+ display: flex;
+ align-items: center;
+}
+.card .carousel-caption .col-sm-9 {
+ text-align: left;
+}
+.navi a {
+ text-decoration:none;
+}
+a > .ico {
+ background-color: grey;
+ padding: 10px; 
+}
+a:hover > .ico {
+ background-color: #666;
+}
+.trex{
+  margin-top: 6%;
+}
+.trex section{
+  display: block;
+}
+.trex .ttt{margin: 10%;}
+.price section{
+  display: block;
+}
+.price span{
+  display: block;
+}
+.price .buh{
+  font-size: 32px;
+  color:red;
+}
+.fat {
+  margin-top: 8%;
+}
+.price{
+  font-size: 18px;
+  line-height: 2.2;
+  background-color: white;
+  border: 1px solid #efefef;
+}
+.but{
+  padding: 1% 8%;
+  background-color: #17daa3;
+  text-align: center;
+  color:white;
+}
+body{
+  color: #efefef;
+}
+footer{
+  width: auto;
+  height: 400px;
+  background-image: black;
+}
