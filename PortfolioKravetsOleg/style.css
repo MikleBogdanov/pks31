@@ -1,0 +1,170 @@
+body{text-decoration: none; font-family: ; background-color: black;}
+
+header{
+	background-color: white;
+	display: grid;
+	grid-gap: 20px;
+	text-align: center;
+	grid-template-columns: minmax(150px, 250px) 2fr 2fr;
+	grid-template-rows: 200px auto auto;
+	grid-template-areas: "photo into into" "phototext into into" "footer footer footer"
+	
+}
+.photo{
+	grid-area: photo;
+	background-image: url(https://avatars.mds.yandex.net/get-pdb/2058232/15d8de67-f70e-4d47-9b7c-08683a0ac552/s1200) ;
+	background-size: contain;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center center;
+	border: 1px solid black;
+	background-color: white;
+}
+.phototext{
+	grid-area: phototext;
+	font-size: 24px;
+	background-color: white;
+}
+.phototext h1{
+	margin: auto;
+}
+.into{
+	grid-area: into;
+	border: 1px solid black;
+}
+.into section{
+	justify-content: center;
+	margin: auto;
+	font-size: 20px;
+}
+.into section span{
+	display: block;
+}
+.into article{
+	font-size: ;
+}
+.footer{
+	background-color: white;
+	grid-area: footer;
+	border: 1px solid black;
+}
+.footer article{
+	font-size: 24px;
+}
+.footer .block1 {
+	display: inline-block;
+	max-width: 45%;
+	width: 100%;
+	margin: auto;
+	padding: 5% 0;
+}
+.footer .block {
+	display: inline-block;
+	max-width: 45%;
+	width: 100%;
+	margin: auto;
+	padding: 5% 0;
+}
+.blog{
+	background-color: white;
+	margin: 5% 0;
+	display: grid;
+	grid-gap: 10px;
+	text-align: center;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto auto;
+	border: 1px solid black;
+	grid-template-areas: 
+	"Zagalovok Zagalovok Zagalovok Zagalovok Zagalovok Zagalovok"
+	"Tekst Tekst Tekst Tekst Tekst Tekst"
+	"work work work work work work"
+	"work work work work work work"
+	"work work work work work work"
+	"svaz svaz svaz svaz svaz svaz"
+
+}
+.blog h1{
+	grid-area: Zagalovok;
+}
+.blog p{
+	grid-area: Tekst;
+}
+.blog .work{
+	grid-area: work;
+}
+.blog a{
+	display: block;
+	margin: auto;
+	text-decoration: none;
+	grid-area: but;
+	padding: 20px 40px;
+	font-size: 20px;
+	background-color: darkred;
+	color: white;
+}
+.blog .svaz{
+	grid-area: svaz;
+}
+.blog a:hover{
+	background-color: white;
+	color: darkred;
+}
+.blog .work div{
+	display: inline-block;
+	margin:  5% auto;
+	padding: 15px;
+	border: 1px solid black
+}
+.blog .work div h1{
+	color: green;
+}
+.blog .work div h1 span{
+	color: red;
+}
+.blog .work div .img{
+	width: 100px;
+	height: 100px;
+}
+.done{
+	margin: 5% 0;
+	display: grid;
+	grid-gap: 10px;
+	background-color: #b81111;
+	text-align: center;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto auto;
+	border: 1px solid black;
+	grid-template-areas: ". . . . . ." ". p p p p ." ". . . . . ."
+}
+.done h1{
+	color: white;
+	font-size: 14px;
+	grid-area: p;
+}
+
+
+@media (max-width: 500px){
+	header{
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas: "photo" "phototext" "into" "footer"
+	}
+	.into section{
+		grid-template-rows: auto;
+	}
+	.footer .block1 {
+	display: block;
+}
+	.phototext h1{
+	font-size: 35px;
+}
+
+}
+@media (max-width: 600px){
+	.into section{
+	justify-content: center;
+	margin: auto;
+	font-size: 18px;
+}
+}
